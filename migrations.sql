@@ -1,14 +1,14 @@
 
-CREATE SCHEMA `email_groups` ;
+CREATE SCHEMA `emails_and_groups` ;
 
-CREATE TABLE `email_groups`.`emails_groups` (
+CREATE TABLE `emails_and_groups`.`emails_groups` (
   `id` BIGINT NOT NULL AUTO_INCREMENT,
   `email` VARCHAR(45) NULL,
   `group` BIGINT NULL,
   PRIMARY KEY (`id`),
   UNIQUE INDEX `id_UNIQUE` (`id` ASC));
 
-ALTER TABLE `email_groups`.`emails_groups` 
+ALTER TABLE `emails_and_groups`.`emails_groups` 
 CHANGE COLUMN `email` `email` VARCHAR(45) NOT NULL,
 DROP PRIMARY KEY,
 ADD PRIMARY KEY (`id`, `email`);
